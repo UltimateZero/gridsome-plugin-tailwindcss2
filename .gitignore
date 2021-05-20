@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+tags
+style.css
+package-lock.json
+yarn.lock
