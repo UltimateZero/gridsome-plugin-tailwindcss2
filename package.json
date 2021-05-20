@@ -1,7 +1,7 @@
 {
   "name": "gridsome-plugin-tailwindcss2",
   "version": "1.0.0",
-  "description": "Add Tailwind CSS v2 to a Gridsome project.",
+  "description": "Add the latest Tailwind CSS to a Gridsome project.",
   "main": "gridsome.server.js",
   "files": [
     "gridsome.client.js",
@@ -17,7 +17,9 @@
     "gridsome-plugin",
     "tailwindcss",
     "postcss",
-    "tailwindcssv2"
+    "postcss8",
+    "tailwindcssv2",
+    "jit"
   ],
   "author": "Mohamed Taha",
   "license": "MIT",
