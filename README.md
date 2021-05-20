@@ -48,10 +48,6 @@ module.exports = {
 };
 ```
 
-## Known Issues
-
-- After running `gridsome develop` for the first time, you will see that the styles are not loaded. To fix it, just trigger any file change so that it rebuilds (e.g. hit save on any file in the project).
-
 ## Credits
 
  - [gridsome-plugin-tailwindcss](https://github.com/brandonpittman/gridsome-plugin-tailwindcss)
