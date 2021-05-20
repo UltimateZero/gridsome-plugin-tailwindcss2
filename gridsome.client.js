@@ -1,4 +1,4 @@
 // eslint-disable-next-line import/no-unassigned-import
-import "./tailwind.css";
+import "gridsome-plugin-tailwindcss2/tailwind.css";
 export default function () {
 }
