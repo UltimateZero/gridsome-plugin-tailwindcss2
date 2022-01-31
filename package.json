@@ -1,11 +1,12 @@
 {
   "name": "gridsome-plugin-tailwindcss2",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Add the latest Tailwind CSS to a Gridsome project.",
   "main": "gridsome.server.js",
   "files": [
     "gridsome.client.js",
     "gridsome.server.js",
+    "tailwindCompiler.js",
     "tailwind.css"
   ],
   "repository": {
