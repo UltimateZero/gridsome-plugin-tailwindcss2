@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const tailwindCompiler = require("tailwindcss/lib/cli/compile").default;
+const tailwindCompiler = require("./tailwindCompiler");
 const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 const crypto = require("crypto");
 
@@ -35,16 +35,22 @@ function TailwindPlugin(api, options) {
   oldHash = getHash(fs.readFileSync(tailwindCssFile))
 
   const buildTailwind = async () => {
-    const result = await tailwindCompiler({
+    tailwindCompiler({
       inputFile: mainCssFile,
       outputFile: tailwindCssFile,
       plugins: compilerPlugins,
-    });
-    const newHash = getHash(result.css);
-    if (oldHash !== newHash) {
-      fs.writeFileSync(tailwindCssFile, result.css);
-    }
-    oldHash = newHash;
+    }).then(result => {
+      const resultCss = result.css;
+      const newHash = getHash(resultCss);
+      if (oldHash !== newHash) {
+        fs.writeFileSync(tailwindCssFile, resultCss);
+      }
+      oldHash = newHash;
+    })
+    .catch(err=>{
+      console.error(err);
+      throw err
+    })
   };
 
   const buildTailwindConditional = (tailwindCssFile) => async (comp) => {
