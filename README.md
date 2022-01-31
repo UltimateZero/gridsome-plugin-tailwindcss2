@@ -5,7 +5,7 @@ This plugin will add latest version of [Tailwind](http://tailwindcss.com) (curre
 
 ## What's the difference between this plugin and [gridsome-plugin-tailwindcss](https://github.com/brandonpittman/gridsome-plugin-tailwindcss)?
 
-This plugin lets you use the full power of the latest TailwindCSS (with JIT mode and all the good stuff). The other plugin relies on TailwindCSS PostCSS7 compatibility build.
+This plugin lets you use the full power of the latest TailwindCSS (~~with JIT mode and all the good stuff~~ It seems that the compatibility build now also supports JIT and is identical to the PostCSS 8 build). The other plugin relies on TailwindCSS PostCSS7 compatibility build.
 
 
 
